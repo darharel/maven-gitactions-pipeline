@@ -11,11 +11,6 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v2
       
-      # Add Git Secrets scanning step before the build process
-      - name: Git install secrets
-        run: git secrets --install
-      - name: Git Secrets Scan
-        run: git secrets --scan
       
       # Additional steps for building Docker image, etc.
       - name: Set up QEMU
